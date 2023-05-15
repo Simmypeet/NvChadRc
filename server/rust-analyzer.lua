@@ -5,14 +5,6 @@ local M = {
             checkOnSave = {
                 command = "clippy",
             },
-            rustfmt = {
-                extraArgs = { "+nightly" },
-            },
-            imports = {
-                granularity = {
-                    enforce = true,
-                }
-            }
         },
     }
 }

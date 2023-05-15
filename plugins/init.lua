@@ -33,6 +33,7 @@ local plugins = {
     -- lsp connfiguration
     {
         'neovim/nvim-lspconfig',
+        config = require('custom.plugins.config.nvim-lspconfig')
     },
 
     -- mason-lspconfig
@@ -41,6 +42,7 @@ local plugins = {
         dependencies = {
             'neovim/nvim-lspconfig',
             'williamboman/mason.nvim',
+            'nvim-telescope/telescope.nvim'
         },
         lazy = false,
         config = require('custom.plugins.config.mason-lspconfig')

@@ -22,35 +22,4 @@ M.general = {
     }
 }
 
-M.telescope = {
-    n = {
-        ['<leader>fs'] = {
-            function()
-                -- if lsp is available, use call :Telescope lsp_document_symbols
-                if vim.lsp.buf.server_ready() then
-                    vim.cmd('Telescope lsp_document_symbols')
-                end
-            end,
-            'find symbols'
-        },
-        ['<leader>fS'] = {
-            function()
-                -- if lsp is available, use call :Telescope lsp_workspace_symbols
-                if vim.lsp.buf.server_ready() then
-                    vim.cmd('Telescope lsp_workspace_symbols')
-                end
-            end,
-            'find workspace symbols'
-        },
-        ['<leader>fd'] = {
-            function()
-                -- if lsp is available, use call :Telescope lsp_document_diagnostics
-                if vim.lsp.buf.server_ready() then
-                    vim.cmd('Telescope diagnostics')
-                end
-            end
-        }
-    }
-}
-
 return M
